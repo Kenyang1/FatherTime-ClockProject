@@ -16,5 +16,22 @@ function updateClock() {
     clockTime.textContent = timeString;
 }
 
+function mySubmit() {
+    const now = new Date();
+    let bday = document.getElementById("bdayInput");
+    let birthday = bday.textContent;
+
+    timeBetween = birthday - now.getDate();
+
+    let result = document.getElementById("result")
+    result.textContent = timeBetween;
+    console.log(timeBetween);
+}
+
+function myFacts() {
+    fact = document.getElementById("fact");
+    fact.textContent = "Hi";
+}
+
 updateClock();
 setInterval(updateClock);

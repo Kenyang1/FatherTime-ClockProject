@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FatherTime</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 id="fatherLabel">Father Time!</h1>
     <div id="clock-container">
-        <label id="firstLabel">US Clock </div>
+        <label id="firstLabel">US Clock </label>
         <div id="clock">00:00:00</div>
+    </div>
+    <div>
+        <label input="firstLabel">Age Calculator</label>
+        <h3>When is your next birthday</h3>
+        <input id ="bdayInput" type="date">
+        <button onclick="mySubmit()">Submit</button><br>
+        <label id="result">Your Birthday is in</label>
+        <br>
+        <br>
+    </div>
+    <div>
+        <h3>Time Facts</h3>
+        <button type="Button" onclick="myFacts()">Click Me</button>
+        <label id="fact"></label>
+        <br>
+        <br>
     </div>
 
     <script src="index.js"></script>

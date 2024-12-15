@@ -1,22 +1,74 @@
 body {
     margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
-#clock-container{
+
+#header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#fatherLabel {
+    font-family: "Courier New", monospace;
+    font-size: 4rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+#clock-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 100px); /* Leave space for the header */
+}
+
+#firstLabel {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 10px;
 }
 
 #clock {
-    font-family: monospace;
-    font-size: 6.5rem;
+    font-family: "Courier New", monospace;
+    font-size: 5rem;
     font-weight: bold;
-    color: blue;
+    color: cyan;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-#fatherLabel {
-    font-family: monospace;
-    font-size: 6.5rem;
+
+#bdayInput {
+    font-family: "Courier New", monospace;
+    font-size: 2rem;
     font-weight: bold;
+    color: cyan;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    #clock {
+        font-size: 3rem;
+    }
+
+    #fatherLabel {
+        font-size: 3rem;
+    }
+}
+#clock:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
