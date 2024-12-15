@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FatherTime</title>
+    <title>Father Time</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="fatherLabel">Father Time!</h1>
-    <div id="clock-container">
-        <label id="firstLabel">US Clock </label>
-        <div id="clock">00:00:00</div>
-    </div>
-    <div>
-        <label input="firstLabel">Age Calculator</label>
-        <h3>When is your next birthday</h3>
-        <input id ="bdayInput" type="date">
-        <button onclick="mySubmit()">Submit</button><br>
-        <label id="result">Your Birthday is in</label>
-        <br>
-        <br>
-    </div>
-    <div>
-        <h3>Time Facts</h3>
-        <button type="Button" onclick="myFacts()">Click Me</button>
-        <label id="fact"></label>
-        <br>
-        <br>
-    </div>
+    <header>
+        <h1 id="fatherLabel">Father Time!</h1>
+    </header>
+
+    <main>
+        <!-- Clock Section -->
+        <section id="clock-container">
+            <h2>US Clock</h2>
+            <div id="clock">00:00:00</div>
+        </section>
+
+        <!-- Age Calculator Section -->
+        <section>
+            <h2>Age Calculator</h2>
+            <p>Enter your birth date to find out how many days until your next birthday:</p>
+            <input id="dateInput" type="date">
+            <button onclick="getDateValue()">Submit</button>
+            <p id="result1" class="info"></p>
+            <p id="result" class="info"></p>
+        </section>
+
+        <!-- Time Facts Section -->
+        <section>
+            <h2>Time Facts</h2>
+            <button onclick="myFacts()">Get a Fact</button>
+            <p id="fact"></p>
+        </section>
+
+        <!-- Stopwatch Section -->
+        <section id="stopwatch-container">
+            <h2>Stopwatch</h2>
+            <div id="display">00:00:00:00</div>
+            <div id="controls">
+                <button id="startBtn" onclick="start()">Start</button>
+                <button id="stopBtn" onclick="stop()">Stop</button>
+                <button id="resetBtn" onclick="reset()">Reset</button>
+            </div>
+        </section>
+    </main>
 
     <script src="index.js"></script>
-
 </body>
 </html>
